@@ -1,50 +1,84 @@
-# Welcome to your Expo app 👋
+# GREFA Censos Urbanos
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil desarrollada para facilitar la recogida de censos de fauna urbana en edificios y entornos urbanos.
 
-## Get started
+El objetivo de la aplicación es permitir la toma rápida de datos en campo, incluso en situaciones de conectividad limitada, simplificando el registro de múltiples especies y mejorando la organización de la información recogida.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+# Funcionalidades principales
 
-2. Start the app
+* Registro de censos urbanos desde dispositivo móvil.
+* Flujo optimizado para trabajo de campo.
+* Registro consecutivo de varias especies en una misma ubicación.
+* Funcionamiento offline con almacenamiento local.
+* Sincronización posterior cuando vuelve la conexión.
+* Opciones dinámicas configurables desde Google Sheets.
+* Validación de campos obligatorios.
+* Selección múltiple en diferentes campos técnicos.
+* Resumen visual antes del envío.
+* Gestión local de registros pendientes.
+* Navegación táctil mediante swipe entre pantallas.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+# Tecnologías utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Expo
+* React Native
+* TypeScript
+* Google Apps Script
+* Google Sheets
+* AsyncStorage
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+# Configuración backend
 
-When you're ready, run:
+La aplicación utiliza Google Apps Script como backend ligero para:
 
-```bash
-npm run reset-project
-```
+* Recepción de censos.
+* Configuración dinámica de opciones.
+* Sincronización de datos.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Las opciones dinámicas se gestionan mediante Google Sheets.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+# Flujo de uso
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Nuevo censo
 
-## Join the community
+Permite iniciar un nuevo registro completamente vacío.
 
-Join our community of developers creating universal apps.
+## Registro consecutivo de especies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Tras guardar un censo, la aplicación mantiene automáticamente los datos de ubicación, edificio y contexto para agilizar el registro de nuevas especies observadas en el mismo lugar.
+
+## Finalizar ubicación
+
+Permite limpiar completamente el formulario y volver al inicio para comenzar un nuevo punto de censo.
+
+---
+
+# Filosofía del proyecto
+
+La aplicación ha sido diseñada priorizando:
+
+* Rapidez de uso en campo.
+* Simplicidad visual.
+* Robustez offline.
+* Facilidad de mantenimiento.
+* Adaptabilidad futura.
+
+---
+
+# Autoría
+
+Aplicación desarrollada inicialmente por:
+
+**Eduardo Herrera Lorenzo**
+
+para:
+
+**GREFA — Grupo de Rehabilitación de la Fauna Autóctona y su Hábitat**
