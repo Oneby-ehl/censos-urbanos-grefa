@@ -1,80 +1,103 @@
 import { StyleSheet } from 'react-native';
 
-export const colors = {
-  primary: '#3c7a3c',
-  card: '#f8fbf7',
-  border: '#d0d0d0',
-  text: '#000',
-  textSecondary: 'gray',
-};
-
 export const ui = StyleSheet.create({
   container: {
-  padding: 20,
-  paddingTop: 55,
-  paddingBottom: 80,
+  paddingHorizontal: 10,
+  paddingTop: 4,
+  paddingBottom: 24,
+  gap: 6,
 },
-inputError: {
-  borderColor: '#b00020',
-  borderWidth: 2,
+
+  title: {
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#1f1f1f',
+    marginBottom: 4,
+    lineHeight: 28,
+  },
+
+  subtitle: {
+    fontSize: 13,
+    color: '#6f6f6f',
+    marginBottom: 10,
+    lineHeight: 18,
+  },
+
+  input: {
+  borderWidth: 1,
+  borderColor: '#cfcfcf',
+  borderRadius: 8,
+  paddingHorizontal: 10,
+  paddingVertical: 4,
+  backgroundColor: '#fff',
+  fontSize: 14,
+  minHeight: 34,
+  height: 38,
 },
-required: {
-  color: '#b00020',
-  fontWeight: 'bold',
-},
-errorText: {
-  color: '#b00020',
-  fontSize: 12,
-  marginTop: -10,
-  marginBottom: 12,
-},
-title: {
-  fontSize: 28,
-  fontWeight: 'bold',
+
+  inputError: {
+    borderColor: '#b00030',
+    borderWidth: 2,
+  },
+
+  required: {
+    color: '#b00030',
+  },
+
+  errorText: {
+    color: '#b00030',
+    fontSize: 13,
+    marginTop: -2,
+    marginBottom: 6,
+  },
+
+  section: {
+    marginTop: 8,
+    marginBottom: 6,
+  },
+
+  label: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#222',
+    marginBottom: 6,
+  },
+
+  card: {
+    borderWidth: 1,
+    borderColor: '#d9d9d9',
+    borderRadius: 14,
+    padding: 14,
+    backgroundColor: '#f8fbf7',
+  },
+  
+ stepHeader: {
+  backgroundColor: '#fff4e8',
+  borderWidth: 1,
+  borderColor: '#ffd3a3',
+  borderRadius: 10,
+  paddingVertical: 5,
+  paddingHorizontal: 10,
+  marginTop: 8,
   marginBottom: 8,
 },
 
-subtitle: {
-  fontSize: 17,
-  color: colors.textSecondary,
-  marginBottom: 22,
+stepTitle: {
+  fontSize: 15,
+  fontWeight: '700',
+  color: '#d56b00',
 },
-  card: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: 12,
-    padding: 14,
-    marginBottom: 14,
-    backgroundColor: colors.card,
-  },
-  button: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: 12,
-    paddingVertical: 14,
-    paddingHorizontal: 16,
-    alignItems: 'center',
-    backgroundColor: '#f7f7f7',
-    marginBottom: 10,
-  },
-  buttonPrimary: {
-    backgroundColor: colors.primary,
-    borderColor: colors.primary,
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: colors.text,
-  },
-  buttonTextPrimary: {
-    color: '#fff',
-  },
-  input: {
-  borderWidth: 1,
-  borderColor: '#999',
-  borderRadius: 8,
-  padding: 10,
-  marginBottom: 15,
+
+formCard: {
   backgroundColor: '#fff',
-  },
+  borderWidth: 1,
+  borderColor: '#e0e0e0',
+  borderRadius: 14,
+  padding: 12,
+  gap: 6,
+},
+
+fieldGroup: {
+  marginTop: 12,
+},
 });
