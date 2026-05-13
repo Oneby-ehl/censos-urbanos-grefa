@@ -1,5 +1,4 @@
-import { Pressable, Text } from 'react-native';
-import { ui } from '../styles/ui';
+import { Pressable, Text, StyleSheet } from 'react-native';
 
 type Props = {
   title: string;
@@ -7,19 +6,23 @@ type Props = {
   primary?: boolean;
 };
 
-export default function AppButton({ title, onPress, primary }: Props) {
+export default function AppButton({
+  title,
+  onPress,
+  primary = false,
+}: Props) {
   return (
     <Pressable
-      onPress={onPress}
       style={[
-        ui.button,
-        primary && ui.buttonPrimary,
+        styles.button,
+        primary ? styles.primary : styles.secondary,
       ]}
+      onPress={onPress}
     >
       <Text
         style={[
-          ui.buttonText,
-          primary && ui.buttonTextPrimary,
+          styles.text,
+          primary && styles.primaryText,
         ]}
       >
         {title}
@@ -27,3 +30,34 @@ export default function AppButton({ title, onPress, primary }: Props) {
     </Pressable>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 44,
+  },
+
+  primary: {
+    backgroundColor: '#3c7a3c',
+  },
+
+  secondary: {
+    backgroundColor: '#f2f2f2',
+    borderWidth: 1,
+    borderColor: '#d0d0d0',
+  },
+
+  text: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#222',
+  },
+
+  primaryText: {
+    color: '#fff',
+  },
+});

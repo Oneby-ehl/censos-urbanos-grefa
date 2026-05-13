@@ -12,7 +12,7 @@ const GRID = [
   ['SO', 'S', 'SE'],
 ];
 
-const CELL_SIZE = 48;
+const CELL_SIZE = 44;
 
 export default function CompassField({ label, value, onChange }: Props) {
   return (
@@ -62,7 +62,7 @@ export default function CompassField({ label, value, onChange }: Props) {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 22,
+    marginBottom: 14,
   },
   label: {
     marginBottom: 8,
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#d0d0d0',
     borderRadius: 16,
-    padding: 8,
+    padding: 5,
     backgroundColor: '#f8fbf7',
   },
   row: {
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     borderColor: '#3c7a3c',
   },
   directionText: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
   },
   directionTextSelected: {

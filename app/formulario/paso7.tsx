@@ -156,14 +156,25 @@ export default function Paso7() {
 
       const result = await response.json();
 
-            if (result.status === 'OK') {
-        await marcarEnviado(pendiente.id_local_app);
-        feedbackGuardado();
-      } else {
-        await marcarError(pendiente.id_local_app);
-        Alert.alert('Guardado pendiente', 'El censo se ha guardado, pero no se pudo enviar.');
-      }
+	if (result.status === 'OK') {
+	await marcarEnviado(pendiente.id_local_app);
 
+		Alert.alert(
+		'Dato enviado',
+		`Especie: ${limpiarValor(censo.especie)}\nEjemplares: ${censo.numero_ejemplares || ''}`,
+		[{ text: 'Aceptar' }]
+	);
+
+  feedbackGuardado();
+
+	} else {
+	await marcarError(pendiente.id_local_app);
+
+	Alert.alert(
+    'Guardado pendiente',
+    'El censo se ha guardado, pero no se pudo enviar.'
+		);
+	}
       prepararNuevoRegistroMismaUbicacion();
       router.replace('/formulario/paso5');
     } catch (error) {
@@ -180,9 +191,9 @@ export default function Paso7() {
 
   return (
     <SwipeStep
-      currentStep={6}
-      totalSteps={6}
-      previousRoute="/formulario/paso6"
+      currentStep={5}
+      totalSteps={5}
+      previousRoute="/formulario/paso5"
     >
       <ScrollView contentContainerStyle={ui.container}>
         <Text style={ui.title}>Resumen del censo</Text>
@@ -226,7 +237,7 @@ export default function Paso7() {
         })}
 
         <AppButton
-          title="Guardar / Enviar censo"
+          title="Guardar / Enviar dato"
           onPress={enviar}
           primary
         />
