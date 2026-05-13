@@ -170,7 +170,7 @@ export default function PendientesScreen() {
               },
             ]}
           >
-            Registros locales
+            REGISTROS LOCALES
           </Text>
         </View>
 

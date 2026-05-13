@@ -116,8 +116,11 @@ export default function Paso5() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(pendiente),
+                    },
+                    body: JSON.stringify({
+            ...pendiente.datos,
+            id_local_app: pendiente.id_local_app,
+          }),
         });
 				
         const result = await response.json();
